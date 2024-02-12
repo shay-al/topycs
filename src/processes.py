@@ -25,7 +25,8 @@ def main():
     # from processes import *
     #procs=list_proc()
     D=csvproc_pid_dict(list_proc())
-    _ =[print(f'{proc["PID"]}: {str(proc)}') for proc in D]
+    
+    _ =[print(f'{proc["PID"]}: {str(proc)}') for proc in D if 'PID' in proc.keys()]
 if __name__ =='__main__':
      main()
 
